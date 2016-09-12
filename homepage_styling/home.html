@@ -44,13 +44,15 @@
     </div>
     <br>
     <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(0)"></span>
       <span class="dot" onclick="currentSlide(1)"></span>
       <span class="dot" onclick="currentSlide(2)"></span>
       <span class="dot" onclick="currentSlide(3)"></span>
       <span class="dot" onclick="currentSlide(4)"></span>
     </div>
     <script>
-    var slideIndex= 1;
+    var slideIndex= 0;
+    showSlidesAutomatic();
     showSlides(slideIndex);
 
     function plusSlides(n){
@@ -72,9 +74,22 @@
         slides[i].style.display="none";
       }
       for(i=0;i<dots.length;i++)
-      {dots[i].className=dots[i].className.replace("active", "");}
+      {dots[i].className=dots[i].className.replace("active", " ");}
       slides[slideIndex-1].style.display="block";
       dots[slideIndex-1].className += "active";
+    }
+    function showSlidesAutomatic() {
+      var i;
+      var slides=document.getElementsByClassName("slides");
+      for(i=0;i<slides.length;i++)
+      {
+        slides[i].style.display="none";
+      }
+      slideIndex++;
+      if(slideIndex>slides.length)
+      {slideIndex=1;}
+      slides[slideIndex-1].style.display="block";
+      setTimeout(showSlidesAutomatic,5000);
     }
     </script>
   </header>
