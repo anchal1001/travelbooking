@@ -39,57 +39,42 @@
 
     <div class="slideshow-container">
       <div class="slides fade">
-        <div class="numbertext">1/7</div>
         <img src="img1.jpg" style="width:100%">
         <div class="text">Explore the world</div>
       </div>
 
       <div class="slides fade">
-        <div class="numbertext">2/7</div>
         <img src="img2.jpg" style="width:100%">
         <div class="text">Explore the world</div>
       </div>
 
       <div class="slides fade">
-        <div class="numbertext">3/7</div>
         <img src="img3.jpg" style="width:100%">
         <div class="text">Explore the world</div>
       </div>
 
       <div class="slides fade">
-        <div class="numbertext">4/7</div>
         <img src="img4.jpg" style="width:100%">
         <div class="text">Explore the world</div>
       </div>
 
       <div class="slides fade">
-        <div class="numbertext">5/7</div>
         <img src="img5.jpg" style="width:100%">
         <div class="text">Explore the world</div>
       </div>
 
       <div class="slides fade">
-        <div class="numbertext">6/7</div>
         <img src="img6.jpg" style="width:100%">
         <div class="text">Explore the world</div>
       </div>
 
       <div class="slides fade">
-        <div class="numbertext">7/7</div>
         <img src="img7.jpg" style="width:100%">
         <div class="text">Explore the world</div>
       </div>
 
       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
       <a class="next" onclick="plusSlides(+1)">&#10095;</a>
-    </div>
-    <br>
-    <div style="text-align:center">
-      <span class="dot" onclick="currentSlide(0)"></span>
-      <span class="dot" onclick="currentSlide(1)"></span>
-      <span class="dot" onclick="currentSlide(2)"></span>
-      <span class="dot" onclick="currentSlide(3)"></span>
-      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
     <script>
     var slideIndex= 0;
@@ -99,13 +84,10 @@
     function plusSlides(n){
       showSlides(slideIndex+=n);
     }
-    function currentSlides(n){
-      showSlides(slideIndex=n);
-    }
+
     function showSlides(n) {
       var i;
       var slides=document.getElementsByClassName("slides");
-      var dots=document.getElementsByClassName("dot");
       if(n>slides.length)
       {slideIndex=1;}
       if(n<1)
@@ -114,10 +96,7 @@
       {
         slides[i].style.display="none";
       }
-      for(i=0;i<dots.length;i++)
-      {dots[i].className=dots[i].className.replace("active", " ");}
       slides[slideIndex-1].style.display="block";
-      dots[slideIndex-1].className += "active";
     }
     function showSlidesAutomatic() {
       var i;
@@ -135,20 +114,31 @@
     </script>
   </header>
   <article>
-    <div class="circle">
-      <p>
+    <div id="back"></div>
+    <div>
         <img id="i1" src="places.png" alt=""/>
+      </div>
+      <div>
         <img id="i2" src="hotel.png" alt=""/>
+      </div>
+      <div>
         <img id="i3" src="food.png" alt=""/>
-      </p>
     </div>
     <div class="area">
       <div>
-        <h1>Travelling</h1>
+        <h1>Travelling</h1
       </div>
       <div class="content">
         <p>...text...</p>
       </div>
+    </div>
   </article>
 </body>
 </html>
+  <!-- <footer>
+    <div class="wrap">
+    <h1>Travel way</h1>
+    <p>Feedback&nbsp&nbsp&#8226&nbsp&nbspTerms and conditions&nbsp&nbsp&#8226&nbsp&nbspPrivacy Policy</p>
+    <h6>&#169; Copyrights 2016 travelway.com All Rights Reserved</h6>
+  </div>
+</footer> ---!>
