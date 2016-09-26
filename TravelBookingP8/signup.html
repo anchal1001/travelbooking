@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign up</title>
+  <link rel="stylesheet" href="signup.css">
+  <meta name="viewport" content="width=device width, initial scale=1.0,maximum-scale1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+</head>
+<body onload="resetForm()">
+  <header>
+    <div class="img">
+        <img id="head" src="head.png" height="100px"/>
+    </div>
+  </header>
+  <div id="container">
+      <p id="heading">Create your account</p>
+    <div id="register">
+    <form>
+      <p>
+        <label id="lblName">Name</label>
+        <input id="tbxName" required="Required" type="text" placeholder="your name"/>
+      </p>
+      <p>
+        <label id="lblName">email</label>
+        <input id="tbxEmail" required="Required" type="email" placeholder="your email"/>
+      </p>
+      <p>
+        <label id="lblPassword">Password</label>
+        <input id="tbxPassword" required="Required" type="password" />
+      </p>
+      <p>
+        <label id="lblConfirmPassword">Confirm Password</label>
+        <input id="tbxConfirmPassword" required="Required" type="password"/>
+      </p>
+      <p>
+        <label id="lblSecQues">Select security question</label>
+        <select id="dropQues" required="Required">
+          <option value="select">(select)</option>
+          <option value="1">Favourite animal</option>
+          <option value="2">Favourite movie</option>
+        </select>
+      </p>
+      <p>
+        <label id="lblans">Answer</label>
+        <input id="tbxAns" required="Required" type="text" placeholder="your answer"/>
+      </p>
+      <p>
+        <label for="roles" id="lblRole">Choose roles</label>
+        <select id="dropRoles" required="Required">
+          <option value="select">(select)</option>
+          <option value="1">Admin</option>
+          <option value="2">User</option>
+        </select>
+      </p>
+      <p>
+        <label id="lblPhone">Phone</label>
+        <input id="tbxPhone" required="Required" type="numbers"/>
+      </p>
+      <p>
+        <label id="lblDOB">Date of birth</label>
+        <input id="tbxDOB" required="Required" type="date"/>
+      </p>
+      <p>
+        <label id="lblCity">City</label>
+        <input id="tbxCity" required="Required" type="text"/>
+      </p>
+      <p class="button">
+        <input type="submit" value="Sign up"/>
+      </p>
+      <p class="changelink">
+        Already a member?
+        <a href="#">Click here</a>&nbspto login</p>
+    </form>
+  </div>
+  <footer>
+    <a href="#">Go back</a>
+  </footer>
+</body>
+</html>
